@@ -1,0 +1,63 @@
+    *{
+        padding:0px;
+        margin:0px;
+        box-sizing: content-box;
+        font-family:calibri;
+    }
+
+    .contenedor{
+        background-color:red;
+        position:fixed;
+        inset:0px 0px 0px 0px;
+        display:flex;
+        justify-content:center;
+    }
+
+    .cara{
+        background-color:pink;
+        cursor: auto;
+        position:relative;
+        margin:auto 0px;
+        display:grid;
+        gap:5px;
+        grid-template-columns:repeat(2, 1fr);
+        grid-template-rows:repeat(3, 1fr);
+        grid-template-areas:
+         "a b"
+         "c c"
+         "d d";
+        padding:5px;
+        text-align:center;
+    }
+
+    .cajon{
+        background-color:blue;
+        width:100px;
+        height:50px;
+    }
+
+    .info{
+        background-color:aliceblue;
+        padding:40px 10px 20px 10px;
+        position:fixed;
+        display:grid;
+        border-radius:10px;
+    }
+
+    .info_window{
+        position:absolute;
+        left:0px;
+        right:0px;
+        top:0px;
+        color:white;
+        padding:5px 10px;
+        background-color:darkred;
+    }
+
+    .inputsColumnRows{
+        display:grid;
+    }
+
+    .inputsCombine{
+        display:grid;
+    }
