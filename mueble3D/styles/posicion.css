@@ -1,0 +1,72 @@
+
+.contenedor_muestreo_cajas{
+    background-color:rgba(0, 0, 0, 0.349);
+    width:100%;
+    height:100vh;
+    display:grid;
+    position: fixed;
+    transition:scale 1 ease-in-out;
+    scale:0;
+}
+
+.contenedor_muestreo_cajas .cara_delantera_test{
+    background-color:white;
+    margin:auto;
+}
+
+.contenedor_columnas {
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  width:400px;
+  height:400px;
+  /* background-color:rgba(124, 57, 19, 0.856); */
+  border: 1px solid #000;
+}
+
+.contenedor_columnas .row_caja {
+  background-color: #ccc;
+  cursor:move;
+  display:flex;
+  justify-content:center;
+}   
+
+.contenedor_columnas .row_caja span{
+    margin:auto;
+}
+
+.contenedor_columnas .row_caja.seleccionado{
+    background-color:rgb(116, 180, 116);
+    transform: rotate(1deg) scale(1.05);
+    cursor: grab;
+}
+
+.contenedor_columnas .row_caja.drag{
+    background-color:#ffffff81;
+    cursor:move;
+}
+
+.columna{
+    display:grid;
+    gap:10px;
+}
+
+/* .box{
+    margin:100px auto;
+    background-color:white;
+} */
+/* 
+.btn_añadir{
+    background-color:rgb(97, 202, 167);
+    padding:10px 20px;
+    border:0px;
+    border-radius:10px;
+    position:fixed;
+    z-index:10;
+    margin:10px;
+}
+
+.btn_añadir:hover{
+    background-color:rgb(86, 221, 176);
+}
+ */

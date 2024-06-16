@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mueble</title>
+    <link rel="stylesheet" href="../style/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../style/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./drawerExample.css">
+</head>
+<body>
+    <!-- CONTROLS -->
+    <div class="controls">
+        <div class="exit btnTool"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></div>
+
+        <label for="scale" class="input-group-text">Zoom</label>
+        <div class="control input-group my-4">
+            <input type="range" class="scale form-range" id="scale" min="10" max="150">
+        </div>
+
+        <div class="drawers container-form my-4 d-grid">
+            <label for="controles" class="form-label input-group-text">Controles - Mueble</label>
+            <div class="input-group m-1" id="controles">
+                <span class="input-group-text"><i class="fa fa-arrows-v" aria-hidden="true"></i></span>
+                <input type="number" placeholder="Largo : 0.0" class="form-control p-1" id="heightInput">
+            </div>
+            <div class="input-group m-1">
+                <span class="input-group-text"><i class="fa fa-arrows-h" aria-hidden="true"></i></span>
+                <input type="number" placeholder="Ancho : 0.0" class="form-control p-1" id="widthInput">
+            </div>
+            <div class="input-group m-1">
+                <span class="input-group-text"><i class="fa fa-cube" aria-hidden="true"></i></span>
+                <input type="number" placeholder="Volumen : 0.0" class="form-control p-1" id="volumeInput">
+            </div>
+            <div class="input-group m-1">
+                <span class="input-group-text"><i class="fa fa-columns" aria-hidden="true"></i></span>
+                <input type="number" placeholder="Columnas : 1" class="form-control p-1" id="columInput">
+            </div>
+            <div class="input-group m-1">
+                <span class="input-group-text"><i class="fa fa-table" aria-hidden="true"></i></span>
+                <input type="number" placeholder="Filas : 1" class="form-control p-1" id="rowInput">
+            </div>
+            <button class="btn btn-primary my-2" id="save">Guardar</button>
+        </div>
+
+        <div class="drawers container-form my-4 d-grid">
+            <label for="controles" class="form-label input-group-text">Controles - Cajones</label>
+            
+            <div class="input-group m-1" id="controles">
+                <span class="input-group-text"><i class="fa fa-arrows-v" aria-hidden="true"></i></span>
+                <input type="number" placeholder="Largo : 0.0" class="form-control p-1" id="heightInput">
+            </div>
+            <div class="input-group m-1">
+                <span class="input-group-text"><i class="fa fa-arrows-h" aria-hidden="true"></i></span>
+                <input type="number" placeholder="Ancho : 0.0" class="form-control p-1" id="widthInput">
+            </div>
+            <div class="d-flex gap-2">
+                
+                <button class="btn btn-success my-2">Añadir</button>
+                <button class="btn btn-primary my-2" id="save">Guardar</button>
+
+            </div>
+        </div>
+
+        <div class="drawers container-form">
+            <div class="input-group m-1">
+                <label for="controles" class="form-label">Controles</label>
+            </div>
+            <button class="btn btn-primary" id="save">Guardar</button> 
+        </div>
+    </div>
+    <!-- FIN CONTROLS -->
+    <div class="modelaje"> 
+        
+        <div class="options"><!-- CONTROLES DE VISUALIZACION -->
+            <div class="show tool"><i class="fa fa-eye-slash" aria-hidden="true"></i></div>
+            <div class="rotateDrawer tool">
+                <label for="bottons">Rotar Cajon</label>
+                <div class="bottons" id="bottons">
+                    <button type="button" class="btn btn-light btnTop" id="btnTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-light btnBottom" id="btnBottom"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-light btnLeft" id="btnLeft"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-light btnRight" id="btnRight"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="tool btnTool"><i class="fa fa-wrench" aria-hidden="true"></i></div>
+        </div> <!-- FIN DE CONSTROLES DE VISUALIZACION -->
+        
+        <div class="textures"><!-- CONTROLES DE TEXTURAS -->
+            <ul>
+                <li><img src="../img/textures/texture1.jpg" alt=""></li>
+                <li><img src="../img/textures/maderaBlancaTexture.jpg" alt=""></li>
+                <li><img src="../img/textures/texture2.png" alt=""></li>
+                <li><input type="color" name="" id=""></li>
+            </ul>
+        </div> <!-- FIN CONTROLES DE TEXTURAS -->   
+
+        <div class="objeto"><!-- CONTENEDOR 2D de objeto -->
+            <div class="objetoCajon"> <!-- CAJON -->
+
+                <div class="caraDelantera cara"> <!-- INICIO CARA DELANTERA --> 
+                
+                    <div class="cajonFila">
+                        <div class="cajonObjeto">
+                            <div class="cajaDelantera cajonCara">delantera</div>
+                            <div class="cajaTrasera cajonCara">atras</div>
+    
+                            <div class="cajaIzquierda cajonCara">izquierda</div>
+                            <div class="cajaDerecha cajonCara">derecha</div>
+                            <div class="cajaInferior cajonCara">abajo</div>
+                        </div>
+                    </div>
+    
+                    <div class="cajonFila">
+                        <div class="cajonObjeto">
+                            <div class="cajaDelantera cajonCara">delantera</div>
+                            <div class="cajaTrasera cajonCara">atras</div>
+    
+                            <div class="cajaIzquierda cajonCara">izquierda</div>
+                            <div class="cajaDerecha cajonCara">derecha</div>
+                            <div class="cajaInferior cajonCara">abajo</div>
+                        </div>
+                    </div>
+                    
+                    <div class="cajonFila">
+                        <div class="cajonObjeto">
+                            <div class="cajaDelantera cajonCara">delantera</div>
+                            <div class="cajaTrasera cajonCara">atras</div>
+    
+                            <div class="cajaIzquierda cajonCara">izquierda</div>
+                            <div class="cajaDerecha cajonCara">derecha</div>
+                            <div class="cajaInferior cajonCara">abajo</div>
+                        </div>
+                    </div>
+
+                </div> <!-- FIN CARA DELANTERA -->
+
+                <div class="caraTrasera cara lateral">Atras</div>
+                <div class="caraIzquierda cara lateral">Izquierda</div>
+                <div class="caraDerecha cara lateral">Derecha</div>
+                <div class="caraInferior cara base">
+                    <div class="plane"></div>
+                </div>
+                <div class="caraSuperior cara">Arriba</div>
+
+            </div> <!-- FIN CAJON -->   
+            
+        </div>
+    </div>
+    <script src="drawerExample.js"></script>
+</body>
+</html>

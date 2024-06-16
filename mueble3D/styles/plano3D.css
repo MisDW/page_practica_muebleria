@@ -1,0 +1,103 @@
+*{
+    padding:0px;
+    margin:0px;
+    transform-style:preserve-3d;
+}
+
+.background_page_plane{
+    background-color:#2D2E32;
+}
+
+.contenedor {
+  box-shadow:0px 0px 60px black;
+  display: grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:5px;
+  /* background-color:green !important; */
+  background-image:url("../../img/textures/vitropiso.jpg");
+  border: 1px solid #000;
+  transform:rotateX(50deg) rotateY(0deg) rotateZ(var(--x));
+  scale:var(--scale);
+  transition:transform 0.2s linear, scale 0.2s linear, display 0.2s linear;
+}
+
+.contenedor .row {
+  /* background-color: red; */
+  cursor:move;
+  display:flex;
+  justify-content:center;
+  /* height:var(--SizeVolume) !important;
+  width:var(--SizeDrawerWidth) !important; */
+    
+  height:100%!important;
+  width:100% !important;
+  position:relative;
+}   
+
+
+.contenedor .row span{
+    position:relative;
+    display:block;
+    height:100% !important;
+    width:100% !important;
+}
+
+.objeto{
+    position: relative;
+    width:auto !important;
+    height:auto !important;
+    transform: scale(1)     
+    rotateX(-90deg) 
+    translateY(calc(var(--SizeDrawerHeight)/-1))
+    translateZ(calc(var(--SizeVolume)/2))
+    translateX(-15px)
+    !important;
+}
+
+.objetoCajon{
+    position:absolute;
+    transform: rotateY(0deg) rotateX(0deg) !important;
+}
+
+.contenedor .row.seleccionado{
+    /* background-color:rgb(116, 180, 116); */
+    transform: rotate(1deg) scale(1.05);
+    cursor: grab;
+}
+/*El drag funciona para ponerle una clase a el objeto que se este arrastrando*/
+.contenedor .row.drag{
+    /* background-color:#ffffff81; */
+    opacity:0.5;
+    cursor:move;
+}
+
+.contenedor.drag{
+    opacity:0.5;
+}
+
+/* clase para el fantasma de mover "sortable.Js" */
+.ghost{
+    /*Alparecer funciona para el objeto que se arrastra
+    y no para el fantasma de arrastre que se genera*/ 
+    opacity:0.4;
+}
+
+
+.columna{
+    display:grid;
+    gap:5px;
+}
+
+.container-size{
+    /* background-color:rgba(0, 0, 0, 0.349); */
+    width:100%;
+    height:100vh;
+    position:fixed;
+    display:grid;
+    justify-content:center;
+}
+
+.container-size .cara_delantera{
+    background-color:white;
+    margin:auto;
+}

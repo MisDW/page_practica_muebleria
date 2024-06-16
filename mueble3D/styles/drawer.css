@@ -1,0 +1,234 @@
+*{
+    box-sizing:border-box;
+    margin:0px;
+    padding:0px;
+}
+
+html{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ROOT ---------------------------------------------------------- */
+
+:root{
+    --x:25deg;
+    --y:-10deg;
+    --colorDrawerDark:#272727;
+    --colorDrawerLight:#777777;
+    --colorDrawerGrey:#443f3f;
+
+    --SizeDrawerHeight:500px; 
+    --SizeDrawerWidth:300px;
+    --SizeVolume:180px;
+
+    --scale:0.5;
+    --rows:3;
+    --columns:1;
+}
+
+.objeto{
+    user-select:none;
+    /* background-color:red; */
+    width:100vh;
+    height:100vh;
+    display:grid;
+    position: relative;
+    color:white;
+    transition: transform 0.5s ease;
+}
+
+.objetoCajon{
+    width:var(--SizeDrawerWidth);
+    height:var(--SizeDrawerHeight);
+    margin:auto;
+    transform-style: preserve-3d;
+    transition:transform 0.5s ease;
+}
+
+.cara{
+    position: absolute;
+    background-image: var(--imgTexture);
+    background-size: cover;
+    border:var(--border) solid #080808;
+}
+
+.cara:hover{
+    border:var(--border) solid #2cd12c;
+}
+
+.caraDelantera{
+    width:var(--SizeDrawerWidth);
+    height:var(--SizeDrawerHeight);
+    /* background-color:var(--colorDrawerGrey); */
+    /* filter:brightness(1); */
+    transform: translateZ(calc(var(--SizeVolume) / 2)) ;
+    display:block;
+    /* grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr 1fr; */
+    z-index:5;
+    transform-style: preserve-3d;
+}
+
+.caraTrasera{
+    width:var(--SizeDrawerWidth);
+    height:var(--SizeDrawerHeight);
+    /* background-color: var(--colorDrawerDark); */
+    transform: translateZ(calc(var(--SizeVolume) / -2)) rotateY(180deg);
+}
+
+.caraIzquierda{
+    /* background-color:lightseagreen; */
+    width: var(--SizeVolume);
+    height: var(--SizeDrawerHeight);
+    filter: var(--filterLeft);
+    /* background-color: var(--colorDrawerDark); */
+    transform: translateX(calc(var(--SizeDrawerWidth) - ( var(--SizeVolume) / 2))) rotateY(90deg);
+}
+
+.caraDerecha{
+    /* background-color:lightgreen; */
+    width:var(--SizeVolume);
+    height:var(--SizeDrawerHeight);
+    filter:var(--filterRight);
+    /* background-color: var(--colorDrawerDark); */
+    transform: translateX(calc(var(--SizeVolume) / -2)) rotateY(-90deg);
+}
+
+.caraSuperior{
+    /* background-color:lightcoral; */
+    width:var(--SizeDrawerWidth);
+    height:var(--SizeVolume);
+    /* background-color: var(--colorDrawerLight); */
+    transform: rotateX(90deg) translateZ(calc(var(--SizeVolume) / 2));
+}
+
+.caraInferior{
+    width:var(--SizeDrawerWidth);
+    height:var(--SizeVolume);
+    /* background-color: var(--colorDrawerLight); */
+    transform: translateY(calc(var(--SizeDrawerHeight) - (var(--SizeVolume) / 2))) rotateX(90deg);
+}
+/* CAJAONES ------- */
+:root{
+    --width:260px;
+    --height:100px;
+    --filterRight:brightness(0.5);
+    --filterLeft:brightness(1.8);
+    --light:#f8f8ff;
+    --imgTexture:url("../../img/textures/texture3.jpg");
+    --border:5px;
+}
+
+/* Div genereal para todas las caras */
+.cajonCara{
+    width:var(--width);
+    height:var(--height);
+    background-color:transparent;
+    /* border:5px solid #3d1d03; */
+    background-image: var(--imgTexture);
+    /* background-image: url(../../img/textures/texture1.jpg); */
+    background-size:cover;
+    border:var(--border) solid #080808;
+}
+
+.cajonFila{
+    cursor: pointer;
+    /* border:5px solid #3d1d03; */
+    background-color:transparent;
+    position: relative;
+    text-align:center;
+    z-index:105;
+    display:grid;
+    margin:20px;
+    transform: translateZ(calc( ( (var(--width) / 2 )  / -2 ) ));
+    transition: transform 0.5s ease;
+    transform-style:preserve-3d;
+}
+
+/* Movilidad de cajon completo para hover */
+/* .cajonFila:hover{
+    transform: translateZ(80px);
+} */
+
+.cajaDelantera:hover{
+    border:var(--border) solid #2cd12c;
+}
+
+.cajonObjeto{
+    width:var(--width);
+    height:var(--height);
+    position:relative;
+    background-color:transparent;
+    transform-style:preserve-3d;
+    margin:50;
+}
+
+.cajaDelantera{
+    /* background-color:var(--colorDrawerDark); */
+    position: absolute;
+    transform: translateZ(calc(var(--SizeVolume) / 2));
+}
+
+.cajaTrasera{
+    /* background-color:yellowgreen; */
+    position:absolute;
+    transform: rotateY(-180deg) translateZ(calc(var(--SizeVolume) / 2));
+    display:block;
+    z-index:5;
+    transform-style: preserve-3d;
+}
+
+ .cajaIzquierda{
+    width:var(--SizeVolume);
+    /* background-color:skyblue; */
+    filter:var(--filterLeft);
+    position:absolute;
+    transform: rotateY(90deg) translateZ(calc((var(--SizeVolume)/2) + (var(--width) - var(--SizeVolume))));
+}
+
+.cajaDerecha{
+    width:var(--SizeVolume);
+    /* background-color:palevioletred; */
+    position:absolute;
+    filter: var(--filterRight);
+    transform: rotateY(-90deg) translateZ(calc(var(--SizeVolume) / 2));
+}
+/* 
+    --width:260px;
+    --height:100px;
+    --SizeVolume:180px;
+*/
+.cajaInferior{
+    /* background-color: darkorange; */
+    position:absolute;
+    /* rotate3d(x, y, z, a) */
+    width:var(--width);  /* 100 */
+    height:var(--SizeVolume); /* 180 */
+    transform:rotateX(90deg) translateZ(calc(-10px));
+    display:none;
+}
+
+.plane{
+    /*
+    --SizeDrawerHeight:500px; 
+    --SizeDrawerWidth:300px;
+    --SizeVolume:180px;
+    */
+    position:absolute;
+    background-color: #666666;
+    width:calc((5 * var(--SizeDrawerWidth)) + 10px);
+    height: calc((5 * var(--SizeVolume)) + 10px);
+    transform: translateX(calc( (((5 * var(--SizeDrawerWidth)) + 10px) / -2) - (var(--SizeDrawerWidth) / -2)  )) translateY(-10px);
+    /* transform:rotateX(50deg); */
+    /* translateX(calc( var(--SizeDrawerWidth) * -2)); */
+    transform-style: preserve-3d;
+}
+
+.pared{
+    position:absolute;
+    background-color: #352c2c;
+    width:calc((5 * var(--SizeDrawerWidth)));
+    height: calc((2 * var(--SizeDrawerHeight)));
+    transform: translateX(calc( (((5 * var(--SizeDrawerWidth)) + 10px) / -2) - (var(--SizeDrawerWidth) / -2))) translateY(calc(var(--SizeDrawerHeight) * -1));
+    transform-style: preserve-3d;
+}

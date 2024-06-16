@@ -1,0 +1,33 @@
+  *{
+    padding:0px;
+    margin:0px;
+  }
+
+  :root{
+    --color_dashboard:#313A46;
+    --color_text_page:#6D767E;
+    }
+
+
+  .bg_backpage{
+      background-color:#F9FAFD;
+  }
+
+  .color_text{
+       color:var(--color_text_page) !important;
+  }
+
+
+.bg_navbar{
+  background-color:var(--color_dashboard) !important;
+  color: #faebd7 !important;
+}
+
+.btn-text-color{
+    color:rgba(255, 255, 255, 0.34) !important;
+}
+
+.btn-text-color:hover{
+   color:rgba(255, 255, 255, 0.564) !important;
+    background-color:#46505e;
+}

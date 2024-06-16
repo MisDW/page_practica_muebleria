@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="./styles/dashBoard.css">
+    <link rel="stylesheet" href="./styles/table_chat.css">
+    <style>
+        body {
+            background-color: #3EECAC;
+            background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+
+        }
+
+        .header {
+            background-color: #0093E9;
+            background-image: linear-gradient(180deg, #0093E9 9%, #ffffff 37%);
+        }
+
+        .barra_de_navegacion {
+            color: #ffff;
+            background-color: rgba(0, 147, 233, 0.900) !important;
+            /* background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+            /* box-shadow:0px 20px 70px #0093E9; */
+        }
+    </style>
+</head>
+
+<body class="vh-100">
+
+    <div class="container-xxl header color_text h-100 d-flex">
+        <!-- FILA DE HEADER -->
+        <div class="row">
+            <!-- BARRA DE NAVEGACION -->
+            <nav class="navbar bg-body-tertiary position-fixed fixed-top barra_de_navegacion">
+                <div class="container-fluid">
+                    <!-- ICON LOGO -->
+                    <a class="navbar-brand text-white" href="./menu.html">MiMueble</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row m-auto w-100">
+            <div class="container d-flex m-auto">
+                <form action="./tabla_permisos.html" method="post" class="card text-center m-auto border-0 shadow">
+                    <div class="card-header">
+                        Permisos de administrador
+                    </div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><span class="material-symbols-outlined">badge</span></span>
+                            <input type="text" name="name" class="form-control" placeholder="Nombre: " aria-label="Username" aria-describedby="basic-addon1">
+                            <span class="input-group-text" id="basic-addon1"><span class="material-symbols-outlined">signature</span></span>
+                            <input type="text" name="last_name" class="form-control" placeholder="Apellido: " aria-label="Username" aria-describedby="basic-addon1" required>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><span class="material-symbols-outlined">account_circle</span></span>
+                            <input type="email" name="email" class="form-control" placeholder="Correo: example@gmail.com" aria-label="Username" aria-describedby="basic-addon1" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><span class="material-symbols-outlined">password</span></span>
+                            <input type="password" name="password" class="form-control" placeholder="Contraseña: 12345" aria-label="Username" aria-describedby="basic-addon1" required>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1"><span class="material-symbols-outlined">call</span></span>
+                            <input type="number" name="number_phone" class="form-control" placeholder="Tel: 000-000-000-0" aria-label="Username" aria-describedby="basic-addon1" maxlength="10" required>
+                        </div>
+                        <select class="form-select my-2" aria-label="Default select example" name="type" required>
+                            <option value="Admin" selected>Tipo de Usuario</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary" name="registrar">Registrar</button>
+                    </div>
+                    <div class="card-footer text-body-secondary">
+                        <a href="./menu.html">Volver al menu</a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
